@@ -1,5 +1,9 @@
 import React from "react";
 import { Pacifico } from "next/font/google";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+import profile from "public/profilepics.jpg";
 
 const pacifico = Pacifico({ subsets: ["latin"], weight: "400" });
 
@@ -7,18 +11,31 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="text-white w-full py-20 p h-[94vh] mt-[4.5rem] flex flex-col items-center bg-black"
+      className="text-white w-full  py-20 p h-[94vh] mt-[4.5rem] flex flex-col items-center bg-black sm:mt-0"
     >
-      <section className="w-fit">
-        <div className="flex flex-col space-y-4">
-          <h2 className={`${pacifico.className} w-fit text-4xl`}>
+      <section className="w-fit px-5 flex flex-col items-center space-y-20">
+        <motion.div
+          initial={{ x: "100vw" }}
+          whileInView={{ x: 0 }}
+          className="flex flex-col space-y-4"
+        >
+          <h2 className={`${pacifico.className} text-[42px]`}>
             <span className="text-red-500">Frontend</span> Developer.
           </h2>
-          <p className=" w-80 text-sm">
+          <p className=" text-lg">
             I enjoy creating robust and scalable frontend solutions that provide
             exceptional user experiences.
           </p>
-        </div>
+        </motion.div>
+        <motion.span>
+          <Image
+            width={300}
+            quality={100}
+            src={profile}
+            alt="My Picture"
+            className="rounded-md"
+          />
+        </motion.span>
       </section>
     </main>
   );
