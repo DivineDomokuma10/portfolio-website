@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="text-white w-full h-[91vh] mt-[4.5rem] text-5xl flex items-center justify-center bg-gray-500"
+      className="text-white w-full h-[91vh] mt-[4.5rem] text-5xl flex items-center justify-center bg-black"
     >
       Hero
     </main>

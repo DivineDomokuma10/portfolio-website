@@ -1,12 +1,15 @@
 "use client";
 
 import About from "@/components/About";
+import { DropNav } from "@/components/DropNav";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Store from "@/utils/context";
 import { useState } from "react";
 
 export default function Home() {
+  const [showDropNav, setShowDropNav] = useState(true);
+
   const [navItems, setNavItems] = useState([
     { id: 1, text: "Home", path: "#home", isActive: true },
     { id: 2, text: "About", path: "#about", isActive: false },
@@ -30,6 +33,7 @@ export default function Home() {
   return (
     <Store.Provider value={{ navItems, handleNavState }}>
       <main className="w-full flex flex-col items-center">
+        {showDropNav && <DropNav />}
         <Navbar />
         <Hero />
         <About />
