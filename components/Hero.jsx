@@ -3,8 +3,6 @@ import { Pacifico } from "next/font/google";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import profile from "public/profilepics.jpg";
-
 const pacifico = Pacifico({ subsets: ["latin"], weight: "400" });
 
 const Hero = () => {
@@ -15,9 +13,9 @@ const Hero = () => {
     >
       <section className="w-fit px-5 flex flex-col items-center space-y-20">
         <motion.div
-          initial={{ x: "-90vw" }}
-          whileInView={{ x: 0 }}
-          transition={{ dely: 0.3, type: "spring" }}
+          initial={{ x: -350, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
           className="flex flex-col space-y-4"
         >
           <h2 className={`${pacifico.className} text-[42px]`}>
@@ -35,8 +33,9 @@ const Hero = () => {
         >
           <Image
             width={300}
+            height={300}
             quality={100}
-            src={profile}
+            src="/profilepics.jpg"
             alt="My Picture"
             className="rounded-md"
           />
