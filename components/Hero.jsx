@@ -15,8 +15,9 @@ const Hero = () => {
     >
       <section className="w-fit px-5 flex flex-col items-center space-y-20">
         <motion.div
-          initial={{ x: "100vw" }}
+          initial={{ x: "-90vw" }}
           whileInView={{ x: 0 }}
+          transition={{ dely: 0.3, type: "spring" }}
           className="flex flex-col space-y-4"
         >
           <h2 className={`${pacifico.className} text-[42px]`}>
@@ -27,7 +28,11 @@ const Hero = () => {
             exceptional user experiences.
           </p>
         </motion.div>
-        <motion.span>
+        <motion.span
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+        >
           <Image
             width={300}
             quality={100}
