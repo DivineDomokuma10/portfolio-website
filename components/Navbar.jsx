@@ -1,9 +1,11 @@
 import Store from "@/utils/context";
 import { useContext } from "react";
+import { FaTimes } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 
 const Navbar = () => {
-  const { navItems, handleNavState, toggleDropNav } = useContext(Store);
+  const { navItems, handleNavState, toggleDropNav, showDropNav } =
+    useContext(Store);
 
   return (
     <nav
@@ -13,10 +15,17 @@ const Navbar = () => {
       <h1 className="text-teal-50 text-2xl font-semibold md:text-4xl md:font-light">
         Portfolio
       </h1>
-      <FaBarsStaggered
-        onClick={toggleDropNav}
-        className="text-teal-50 text-2xl transition font-semibold cursor-pointer hover:text-red-500 hover:scale-110 md:hidden"
-      />
+      {showDropNav ? (
+        <FaTimes
+          onClick={toggleDropNav}
+          className="text-teal-50 text-2xl transition font-semibold cursor-pointer hover:text-red-500 hover:scale-110 md:hidden"
+        />
+      ) : (
+        <FaBarsStaggered
+          onClick={toggleDropNav}
+          className="text-teal-50 text-2xl transition font-semibold cursor-pointer hover:text-red-500 hover:scale-110 md:hidden"
+        />
+      )}
       <div className="w-fit h-full hidden md:text-white md:flex md:space-x-10 font-light">
         {navItems.map((navItem) => (
           <a

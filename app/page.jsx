@@ -8,7 +8,7 @@ import Store from "@/utils/context";
 import { useState } from "react";
 
 export default function Home() {
-  const [showDropNav, setShowDropNav] = useState(true);
+  const [showDropNav, setShowDropNav] = useState(false);
 
   const [navItems, setNavItems] = useState([
     { id: 1, text: "Home", path: "#home", isActive: true },
@@ -33,7 +33,9 @@ export default function Home() {
   };
 
   return (
-    <Store.Provider value={{ navItems, handleNavState, toggleDropNav }}>
+    <Store.Provider
+      value={{ navItems, handleNavState, showDropNav, toggleDropNav }}
+    >
       <main className="w-full flex flex-col items-center">
         {showDropNav && <DropNav />}
         <Navbar />
