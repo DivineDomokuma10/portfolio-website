@@ -18,6 +18,8 @@ export default function Home() {
     { id: 5, text: "Contact", path: "#contact", isActive: false },
   ]);
 
+  const toggleDropNav = () => setShowDropNav((prev) => !prev);
+
   const handleNavState = (id) => {
     setNavItems((prev) =>
       prev.map((navItem) => {
@@ -31,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <Store.Provider value={{ navItems, handleNavState }}>
+    <Store.Provider value={{ navItems, handleNavState, toggleDropNav }}>
       <main className="w-full flex flex-col items-center">
         {showDropNav && <DropNav />}
         <Navbar />

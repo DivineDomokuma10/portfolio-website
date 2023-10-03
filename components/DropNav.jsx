@@ -1,12 +1,17 @@
 import Store from "@/utils/context";
 
+import { motion } from "framer-motion";
 import React, { useContext } from "react";
 
 export const DropNav = () => {
   const { navItems, handleNavState } = useContext(Store);
 
   return (
-    <nav className="w-3/4 flex flex-col items-center space-y-5 fixed top-20 bg-opacity-70 bg-teal-50 rounded-md p-4 sm:hidden">
+    <motion.nav
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      className="w-[90%] flex flex-col items-center space-y-5 fixed top-24 bg-opacity-70 bg-teal-50 rounded-md p-4 sm:hidden"
+    >
       {navItems.map((navItem) => (
         <a
           key={navItem.id}
@@ -19,6 +24,6 @@ export const DropNav = () => {
           {navItem.text}
         </a>
       ))}
-    </nav>
+    </motion.nav>
   );
 };
