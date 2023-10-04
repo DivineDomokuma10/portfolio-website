@@ -29,7 +29,7 @@ const Hero = () => {
         </motion.div>
         <motion.span
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          whileInView={{ scale: 1 }}
           transition={{ duration: 1 }}
         >
           <Image

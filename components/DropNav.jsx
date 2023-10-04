@@ -10,7 +10,7 @@ export const DropNav = () => {
     <motion.nav
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      className="w-[90%] flex flex-col items-center space-y-5 fixed top-24 bg-teal-50 rounded-md p-4 sm:hidden"
+      className="w-[90%] flex flex-col items-center space-y-5 z fixed top-24 bg-teal-50 rounded-md p-4 sm:hidden"
     >
       {navItems.map((navItem) => (
         <a
