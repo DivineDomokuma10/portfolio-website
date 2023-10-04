@@ -5,7 +5,7 @@ const pacifico = Pacifico({ subsets: ["latin"], weight: "400" });
 
 const About = () => {
   const [skill, setSkill] = useState("");
-  const skills = ["I'm a Freelancer.", "I'm a Frontend Developer."];
+  const skills = ["Freelancer.", "Frontend Developer."];
   let i = 0;
   let e = 0;
   let holder = "";
@@ -48,7 +48,7 @@ const About = () => {
     >
       <section>
         <div>
-          <h2 className="text-5xl">
+          <h2 className="text-[28px]">
             Hello,{" "}
             <span className={`${pacifico.className}  text-red-500`}>
               Divine Domokuma
@@ -57,7 +57,7 @@ const About = () => {
           </h2>
         </div>
 
-        <p>Hi, {skill}</p>
+        <p>Hi, I&#39;m a span{skill}</p>
       </section>
     </main>
   );

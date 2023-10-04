@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full flex items-center backdrop-blur backdrop-filter bg-opacity-70 fixed top-0 justify-between p-5 bg-black
+      className={`w-full flex items-center z-40 backdrop-blur backdrop-filter bg-opacity-70 fixed top-0 justify-between p-5 bg-black
       md:w-11/12 md:static md:border-b-2 md:border-gray-400 `}
     >
       <h1 className="text-teal-50 text-2xl font-semibold md:text-4xl md:font-light">

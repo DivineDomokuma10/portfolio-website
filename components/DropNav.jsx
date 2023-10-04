@@ -10,7 +10,7 @@ export const DropNav = () => {
     <motion.nav
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      className="w-[90%] flex flex-col items-center space-y-5 z fixed top-24 bg-teal-50 rounded-md p-4 sm:hidden"
+      className="w-full flex flex-col items-center space-y-5 z-30 fixed top-16 bg-stone-900 rounded-md p-4 sm:hidden"
     >
       {navItems.map((navItem) => (
         <a
@@ -18,7 +18,7 @@ export const DropNav = () => {
           href={navItem.path}
           onClick={() => handleNavState(navItem.id)}
           className={`font-semibold text-2xl tracking-[.2rem] ${
-            navItem.isActive ? "text-red-500" : ""
+            navItem.isActive ? "text-red-500" : "text-teal-50"
           } hover:text-red-500 hover:scale-105`}
         >
           {navItem.text}
