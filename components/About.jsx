@@ -63,7 +63,7 @@ const About = () => {
         <section className="flex flex-col items-center space-y-4">
           <motion.div
             initial={{ x: -350, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className="flex flex-col space-y-2"
           >
@@ -80,7 +80,7 @@ const About = () => {
 
           <div
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            whileInView={{ scale: 1 }}
             transition={{ duration: 1 }}
           >
             <Image
@@ -94,7 +94,7 @@ const About = () => {
         <section className="flex flex-col items-center space-y-10">
           <motion.div
             initial={{ x: 350, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className="flex flex-col space-y-2"
           >
@@ -110,7 +110,7 @@ const About = () => {
 
           <motion.div
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            whileInView={{ scale: 1 }}
             transition={{ duration: 1 }}
           >
             <Image
