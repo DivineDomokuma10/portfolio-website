@@ -48,19 +48,80 @@ const About = () => {
       id="about"
       className="text-white w-full p-5 flex flex-col space-y-32 items-center justify-center "
     >
-      <section>
-        <div>
-          <h2 className="text-[28px]">
-            Hello,{" "}
-            <span className={`${pacifico.className}  text-red-500`}>
-              Divine Domokuma
-            </span>{" "}
-            here
-          </h2>
-        </div>
+      <div className="flex flex-col items-center space-y-2">
+        <h2 className={`${pacifico.className}  text-[26.5px]`}>
+          Hello, <span className="text-red-500">Divine Domokuma</span> here.
+        </h2>
 
-        <p>Hi, I&#39;m a span{skill}</p>
-      </section>
+        <h4 className="text-center text-2xl">
+          I&#39;m a{" "}
+          <span className={`${pacifico.className}  text-red-500`}>{skill}</span>
+          .
+        </h4>
+      </div>
+      <div className="flex flex-col items-center space-y-16">
+        <section className="flex flex-col items-center space-y-4">
+          <motion.div
+            initial={{ x: -350, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col space-y-2"
+          >
+            <h2 className={`${pacifico.className}  text-red-500 text-xl`}>
+              Frontend Developer
+            </h2>
+            <p>
+              I&#39;m a passionate Frontend Developer with experience in
+              crafting, creation and building user-centered web products. I
+              thrive on the exciting journey of turning creative ideas into
+              functional, beautiful, robust and intuitive digital solution.
+            </p>
+          </motion.div>
+
+          <div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Image
+              src="/About-Us.svg"
+              alt="frontend pics"
+              width={300}
+              height={300}
+            />
+          </div>
+        </section>
+        <section className="flex flex-col items-center space-y-10">
+          <motion.div
+            initial={{ x: 350, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col space-y-2"
+          >
+            <h2 className={`${pacifico.className}  text-red-500 text-xl`}>
+              React Developer
+            </h2>
+            <p>
+              I&#39;m a Skilled React Developer with Knowledge of Core react
+              concepts necessary for building scalable apps, am also grounded
+              with related web tools in the React Ecosystem.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Image
+              src="/react.svg"
+              alt="frontend pics"
+              width={270}
+              height={270}
+            />
+          </motion.div>
+        </section>
+      </div>
     </main>
   );
 };
