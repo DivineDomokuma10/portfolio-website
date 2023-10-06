@@ -36,7 +36,7 @@ export default function Home() {
     <Store.Provider
       value={{ navItems, handleNavState, showDropNav, toggleDropNav }}
     >
-      <main className="w-full flex flex-col items-center">
+      <main className="w-full flex flex-col items-center overflow-hidden">
         {showDropNav && <DropNav />}
         <Navbar />
         <Hero />

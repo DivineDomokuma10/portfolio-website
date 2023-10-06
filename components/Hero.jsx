@@ -14,7 +14,7 @@ const Hero = () => {
       <section className="w-fit px-5 flex flex-col items-center space-y-20">
         <motion.div
           initial={{ x: -350, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="flex flex-col space-y-4"
         >
@@ -29,7 +29,7 @@ const Hero = () => {
         </motion.div>
         <motion.span
           initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
+          animate={{ scale: 1 }}
           transition={{ duration: 1 }}
         >
           <Image
