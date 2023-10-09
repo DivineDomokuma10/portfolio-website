@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="text-white w-full  py-20 p h-[94vh] mt-[4.5rem] flex flex-col items-center bg-black sm:mt-0"
+      className="text-black w-full  py-20 p h-[94vh] mt-[4.5rem] flex flex-col items-center sm:mt-0"
     >
       <section className="w-fit px-5 flex flex-col items-center space-y-20">
         <motion.div

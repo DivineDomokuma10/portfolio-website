@@ -4,6 +4,8 @@ import About from "@/components/About";
 import { DropNav } from "@/components/DropNav";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Project from "@/components/Project";
+import Stack from "@/components/Stack";
 import Store from "@/utils/context";
 import { useState } from "react";
 
@@ -36,11 +38,13 @@ export default function Home() {
     <Store.Provider
       value={{ navItems, handleNavState, showDropNav, toggleDropNav }}
     >
-      <main className="w-full flex flex-col items-center overflow-hidden">
+      <main className="w-full flex flex-col text-black items-center overflow-hidden">
         {showDropNav && <DropNav />}
         <Navbar />
         <Hero />
         <About />
+        <Stack />
+        <Project />
       </main>
     </Store.Provider>
   );

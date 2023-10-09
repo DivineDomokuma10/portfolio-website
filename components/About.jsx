@@ -7,46 +7,46 @@ const pacifico = Pacifico({ subsets: ["latin"], weight: "400" });
 
 const About = () => {
   const [skill, setSkill] = useState("");
-  const skills = ["Freelancer.", "Frontend Developer."];
-  let i = 0;
-  let e = 0;
+  const skills = ["Freelancer", "Frontend Developer"];
+  let arrayIterationVar = 0;
+  let charIterationVar = 0;
   let holder = "";
   let isComplete = false;
   let canDelete = false;
+
   useEffect(() => writeEffect(), []);
 
   // Writting Effect Algorithm
   const writeEffect = () => {
-    const test = (text) => setSkill(skill + text);
-    if (i < skills.length) {
-      let curSkill = skills[i];
-      if (e < curSkill.length && isComplete === false) {
-        holder += curSkill[e];
-        test(holder);
-        e++;
-        if (e === curSkill.length) {
+    if (arrayIterationVar < skills.length) {
+      let curSkill = skills[arrayIterationVar];
+      if (charIterationVar < curSkill.length && isComplete === false) {
+        holder += curSkill[charIterationVar];
+        setSkill(skill + holder);
+        charIterationVar++;
+        if (charIterationVar === curSkill.length) {
           isComplete = true;
           canDelete = true;
         }
-      } else if (e !== 0 && canDelete === true) {
-        holder = holder.slice(0, e - 2);
-        test(holder);
-        e--;
+      } else if (charIterationVar !== 0 && canDelete === true) {
+        holder = holder.slice(0, charIterationVar - 2);
+        setSkill(skill + holder);
+        charIterationVar--;
       } else {
         isComplete = false;
         canDelete = false;
-        i++;
+        arrayIterationVar++;
       }
     } else {
-      i = 0;
+      arrayIterationVar = 0;
     }
-    setTimeout(() => writeEffect(), 250);
+    setTimeout(() => writeEffect(), 350);
   };
 
   return (
     <main
       id="about"
-      className="text-white w-full p-5 flex flex-col space-y-32 items-center justify-center "
+      className="text-black w-full p-5 flex flex-col space-y-20 items-center justify-center "
     >
       <div className="flex flex-col items-center space-y-2">
         <h2 className={`${pacifico.className}  text-[26.5px]`}>
@@ -78,7 +78,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div
+          <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 1 }}
@@ -89,7 +89,7 @@ const About = () => {
               width={300}
               height={300}
             />
-          </div>
+          </motion.div>
         </section>
         <section className="flex flex-col items-center space-y-10">
           <motion.div
@@ -103,8 +103,8 @@ const About = () => {
             </h2>
             <p>
               I&#39;m a Skilled React Developer with Knowledge of Core react
-              concepts necessary for building scalable apps, am also grounded
-              with related web tools in the React Ecosystem.
+              concepts necessary for building scalable applications, and i am
+              also grounded with related web tools in the React Ecosystem.
             </p>
           </motion.div>
 
