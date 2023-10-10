@@ -32,9 +32,9 @@ const Navbar = () => {
             key={navItem.id}
             href={navItem.path}
             onClick={() => handleNavState(navItem.id)}
-            className={`${
-              navItem.isActive && "text-red-500 font-semibold"
-            } hover:text-red-500 hover:scale-105`}
+            className={` ${
+              navItem.isActive ? "text-red-500 font-semibold" : "text-black"
+            } hover:text-red-500 hover:scale-105 `}
           >
             {navItem.text}
           </a>
