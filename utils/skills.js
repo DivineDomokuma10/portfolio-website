@@ -1,14 +1,11 @@
 const Skills = [
-  { id: 2, text: "FRAMER MOTION", image: "/framermotion.jpg" },
-  { id: 3, text: "GIT", image: "/git.png" },
-  { id: 4, text: "HTML", image: "/html.png" },
-  { id: 5, text: "JAVASCRIPT", image: "/javascript.png" },
-  { id: 6, text: "NEXT JS", image: "/next.png" },
-  { id: 7, text: "REACT", image: "/react.svg" },
-  { id: 1, text: "CSS", image: "/css.png" },
-  { id: 8, text: "REDUX", image: "/redux.png" },
-  { id: 9, text: "TAILWINDCSS", image: "/tailwindcss.jpg" },
-  { id: 10, text: "TYPESCRIPT", image: "/typescript.png" },
+  { id: 1, image: "/git.png" },
+  { id: 2, image: "/html.png" },
+  { id: 3, image: "/react.svg" },
+  { id: 4, image: "/css.png" },
+  { id: 5, image: "/redux.png" },
+  { id: 6, image: "/typescript.png" },
+  { id: 7, image: "/next.png" },
 ];
 
 export default Skills;

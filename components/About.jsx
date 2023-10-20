@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { Pacifico } from "next/font/google";
 import Image from "next/image";
@@ -46,25 +48,23 @@ const About = () => {
   return (
     <main
       id="about"
-      className="text-black w-full p-5 flex flex-col space-y-20 items-center justify-center sm:w-11/12"
+      className="text-teal-50 w-full p-5 flex flex-col space-y-20 items-center justify-center sm:w-11/12"
     >
       <div className="flex flex-col items-center space-y-2">
         <h2
-          className={`${pacifico.className}  text-[26.5px] sm:text-4xl sm:font-bold`}
+          className={`${pacifico.className}  text-2xl sm:text-4xl sm:font-bold`}
         >
           Hello, <span className="text-red-500">Divine Domokuma</span> here.
         </h2>
 
-        <h4 className="text-center text-2xl">
-          I&#39;m a{" "}
-          <span className={`${pacifico.className}  text-red-500`}>{skill}</span>
-          .
+        <h4 className="text-center text-xl">
+          I&#39;m a <span className="text-red-500">{skill}</span>.
         </h4>
       </div>
       <div className="flex flex-col items-center space-y-5">
         <section className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-between sm:space-y-0">
           <motion.div
-            initial={{ x: -350, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className="flex flex-col space-y-2 sm:w-5/12 sm:space-y-7"
@@ -74,7 +74,7 @@ const About = () => {
             >
               Frontend Developer
             </h2>
-            <p className="sm:text-lg">
+            <p className="text-teal-50 text-base sm:text-lg">
               I&#39;m a passionate Frontend Developer with experience in
               crafting, creation and building user-centered web products. I
               thrive on the exciting journey of turning creative ideas into
@@ -98,7 +98,7 @@ const About = () => {
         </section>
         <section className="flex flex-col items-center space-y-10 sm:flex-row-reverse sm:justify-between sm:space-y-0">
           <motion.div
-            initial={{ x: 350, opacity: 0 }}
+            initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className="flex flex-col space-y-2 sm:w-5/12 sm:space-y-7"
@@ -108,7 +108,7 @@ const About = () => {
             >
               React Developer
             </h2>
-            <p className="sm:text-lg">
+            <p className="text-teal-50 text-base sm:text-lg">
               I&#39;m a Skilled React Developer with Knowledge of Core react
               concepts necessary for building scalable applications, and i am
               also grounded with related web tools in the React Ecosystem.

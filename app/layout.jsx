@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${quicksand.className}  max-w-screen h-screen bg-white`}
+        className={`${quicksand.className}  max-w-screen h-screen bg-black`}
       >
         {children}
       </body>

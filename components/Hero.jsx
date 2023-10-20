@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="text-black w-full  py-20 p h-[94vh] mt-[4.5rem] flex flex-col items-center sm:mt-0"
+      className="text-white w-full py-20 p h-[94vh] mt-[4.5rem] flex flex-col items-center sm:mt-0"
     >
       <section className="w-fit px-5 flex flex-col items-center space-y-20 sm:w-11/12 sm:flex-row sm:space-y-0 sm:space-x-20 ">
         <motion.div
@@ -20,7 +20,7 @@ const Hero = () => {
         >
           <div className="flex flex-col space-y-4 sm:h-full sm:space-y-7">
             <h2
-              className={`${pacifico.className}  text-[42px] sm:text-7xl sm:w-28 sm:font-bold sm:t`}
+              className={`${pacifico.className} text-[42px] sm:text-7xl sm:w-28 sm:font-bold sm:t`}
             >
               <span className="text-red-500">Frontend</span> Developer.
             </h2>

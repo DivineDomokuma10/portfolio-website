@@ -10,7 +10,7 @@ const Stack = () => {
   return (
     <main
       id="stack"
-      className="text-black flex flex-col space-y-10 items-center py-40"
+      className="h-fit text-black flex flex-col space-y-10 items-center py-0"
     >
       <h1 className={`${pacifico.className}  text-3xl text-red-600`}>
         Skill and Experience
@@ -22,16 +22,15 @@ const Stack = () => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 1 }}
-            className="flex flex-col c p-2"
+            className="flex items-center justify-center p-2 rounded-full"
           >
             <Image
-              width={120}
-              height={120}
+              width={85}
+              height={85}
               alt={skill.text}
               src={skill.image}
               className="transition-all cursor-pointer hover:scale-125"
             />
-            <p className="text-center">{skill.text.toLowerCase()}</p>
           </motion.div>
         ))}
       </section>
