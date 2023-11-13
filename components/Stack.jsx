@@ -12,7 +12,7 @@ const Stack = () => {
       className="w-full text-black flex flex-col space-y-10 items-center"
     >
       <h1 className="text-[26.5px] text-red-500 sm:text-4xl sm:font-bold">
-        Skill Set
+        Skill and Experience
       </h1>
       <section className="grid grid-cols-2 col space-x-8 space-y-5 px-5 md:grid-cols-6">
         {Skills.map((skill) => (

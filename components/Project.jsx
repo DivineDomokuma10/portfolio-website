@@ -26,7 +26,7 @@ const Project = () => {
   return (
     <main
       id="project"
-      className="w-full p-3 flex flex-col space-y-7 items-center justify-center sm:w-11/12"
+      className="w-full py-10 px-3 flex flex-col space-y-7 items-center justify-center sm:w-11/12"
     >
       <h1 className="text-[26.5px] text-red-500 sm:text-4xl sm:font-bold">
         Portfolio and Projects

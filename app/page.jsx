@@ -2,6 +2,7 @@
 
 import About from "@/components/About";
 import { DropNav } from "@/components/DropNav";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
@@ -45,6 +46,7 @@ export default function Home() {
         <About />
         <Stack />
         <Project />
+        <Footer />
       </main>
     </Store.Provider>
   );

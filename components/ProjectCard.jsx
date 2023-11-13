@@ -9,7 +9,7 @@ const ProjectCard = ({ liveDemo, sampleImg, gitRepo }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="relative group"
+      className="w-fit relative group"
     >
       <div>
         <Image
@@ -20,7 +20,7 @@ const ProjectCard = ({ liveDemo, sampleImg, gitRepo }) => {
           className="rounded-lg"
         />
       </div>
-      <div className="w-full h-full items-center hidden justify-center space-x-10 absolute bottom-0 backdrop-filter backdrop-blur-md bg-opacity-10 bg-black rounded-lg group-hover:flex">
+      <div className=" px-2 py-1 bottom-0 w-full h-full items-center hidden justify-center space-x-10 absolute backdrop-filter backdrop-blur-md bg-opacity-10 bg-black rounded-lg group-hover:flex">
         <a href="">
           <FaEye className="text-2xl cursor-pointer text-gray-400 hover:scale-115 hover:text-red-400" />
         </a>
