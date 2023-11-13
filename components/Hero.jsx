@@ -28,6 +28,13 @@ const Hero = () => {
               I enjoy creating robust and scalable frontend solutions that
               provide exceptional user experiences.
             </p>
+            <a
+              href="/DivineDomokumaNew.pdf"
+              download
+              className="w-fit px-5 py-2 rounded-md border border-red-500 hover:bg-red-500"
+            >
+              Resume
+            </a>
           </div>
           <div className="hidden w-full sm:flex sm:justify-between">
             <motion.p

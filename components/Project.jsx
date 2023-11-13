@@ -1,6 +1,8 @@
 "use client";
 import Projects from "@/utils/projects";
 import React, { useState } from "react";
+import ProjectTab from "./ProjectTab";
+import ProjectCard from "./ProjectCard";
 
 const Project = () => {
   const [filterBy, setFilterBy] = useState("All");
@@ -9,8 +11,6 @@ const Project = () => {
     { id: 1, text: "All", active: true },
     { id: 2, text: "React.js", active: false },
     { id: 3, text: "Next.js", active: false },
-    { id: 4, text: "React Native", active: false },
-    { id: 5, text: "Ui/Ux", active: false },
   ]);
 
   const handleFilter = (filterId, filterText) => {
@@ -20,39 +20,45 @@ const Project = () => {
     });
 
     setFilters(filtered);
-
     setFilterBy(filterText);
-    console.log(filterText);
   };
 
   return (
     <main
       id="project"
-      className="w-full p-3 flex flex-col space-y-10 items-center justify-center sm:w-11/12"
+      className="w-full p-3 flex flex-col space-y-7 items-center justify-center sm:w-11/12"
     >
-      <h1 className="text-[26.5px] sm:text-4xl sm:font-bold">
+      <h1 className="text-[26.5px] text-red-500 sm:text-4xl sm:font-bold">
         Portfolio and Projects
       </h1>
       <section className="flex flex-wrap justify-center">
         {filters.map((filter) => (
-          <span
+          <ProjectTab
             key={filter.id}
-            onClick={() => handleFilter(filter.id, filter.text)}
-            className={`py-2 px-4 m-2 mx-3 transition rounded-md text-semibold cursor-pointer ${
-              filter.active ? "bg-red-500 text-teal-50" : "bg-gray-200"
-            } hover:scale-110`}
-          >
-            {filter.text}
-          </span>
+            handleFilter={handleFilter}
+            filterId={filter.id}
+            filterText={filter.text}
+            filterActive={filter.active}
+          />
         ))}
       </section>
-      <section className="text-teal-50">
+      <section className="w-full items-center text-teal-50 flex flex-col space-y-10 md:grid md:grid-cols-3 md:pl-16">
         {filterBy === "All"
           ? Projects.map((project) => (
-              <div key={project.id}>{project.liveDemo}</div>
+              <ProjectCard
+                key={project.id}
+                liveDemo={project.liveDemo}
+                sampleImg={project.samlpeImg}
+              />
             ))
           : Projects.filter((filter) => filter.projectType === filterBy).map(
-              (project) => <div key={project.id}>{project.liveDemo}</div>
+              (project) => (
+                <ProjectCard
+                  key={project.id}
+                  liveDemo={project.liveDemo}
+                  sampleImg={project.samlpeImg}
+                />
+              )
             )}
       </section>
     </main>
