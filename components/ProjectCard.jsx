@@ -21,7 +21,7 @@ const ProjectCard = ({ liveDemo, sampleImg, gitRepo }) => {
         />
       </div>
       <div className=" px-2 py-1 bottom-0 w-full h-full items-center hidden justify-center space-x-10 absolute backdrop-filter backdrop-blur-md bg-opacity-10 bg-black rounded-lg group-hover:flex">
-        <a href="">
+        <a href={gitRepo}>
           <FaEye className="text-2xl cursor-pointer text-gray-400 hover:scale-115 hover:text-red-400" />
         </a>
 
