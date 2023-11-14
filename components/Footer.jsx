@@ -24,7 +24,7 @@ const Footer = () => {
       </h2>
       <div className="flex space-x-7 items-center">
         {contactLinks.map((link) => (
-          <a href={link.link}>
+          <a key={link.link} href={link.link}>
             <link.icon className="text-gray-500 text-2xl transition hover:text-red-500" />
           </a>
         ))}
